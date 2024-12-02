@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Added padding for small screens */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; /* Full width for small screens */
+    max-width: 400px; /* Limit size on larger devices */
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em; /* Scaled for smaller screens */
+    color: #ff4081;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1em; /* Smaller text for mobile */
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.message {
+    font-size: 1.2em; /* Adjusted size for readability */
+    color: #555;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #ffd1dc, #ffe0e9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    min-height: 50px; /* Ensure space even without content */
+}
+
+button {
+    width: 100%; /* Full width for mobile */
+    padding: 12px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(135deg, #ff4081, #ff7096);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff7096, #ff4081);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(255, 64, 129, 0.2);
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px; /* Wider layout for tablets and above */
+    }
+
+    h1 {
+        font-size: 2.2em; /* Larger text for bigger screens */
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .message {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: auto; /* Natural width on larger screens */
+        padding: 15px 30px;
+    }
+}

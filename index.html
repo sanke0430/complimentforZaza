@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hey, Beautiful!</h1>
+        <p>Click the button for a little surprise...</p>
+        <div class="message" id="message" aria-live="polite">😊</div>
+        <button onclick="generateCompliment()">Get a Compliment</button>
+        <button onclick="copyToClipboard()">Copy Compliment</button>
+    </div>
+    <script>
+        const compliments = [
+            "You're absolutely amazing!",
+            "Your smile lights up the room!",
+            "You have a heart of gold!",
+            "You're smarter than you think!",
+            "You're the reason someone believes in love!",
+            "You're a true original!",
+            "You make life more fun!",
+            "You're a breath of fresh air!",
+            "You make the world a better place!",
+            "You're incredibly talented!"
+        ];
+
+        function generateCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerText = compliments[randomIndex];
+        }
+
+        function copyToClipboard() {
+            const messageDiv = document.getElementById('message');
+            navigator.clipboard.writeText(messageDiv.innerText)
+                .then(() => alert("Compliment copied to clipboard!"))
+                .catch(err => console.error("Failed to copy:", err));
+        }
+    </script>
+</body>
+</html>
